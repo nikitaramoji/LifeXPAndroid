@@ -1112,6 +1112,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnCalculateLifeXP
 id btnLogin
 id btnRegister
 id buttonPanel
@@ -1148,6 +1149,8 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etBirthday
+id etCountry
 id etEmail
 id etPassword
 id exitUntilCollapsed
@@ -1218,6 +1221,9 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id radioFemale
+id radioMale
+id radioSex
 id right
 id right_icon
 id right_side
@@ -1291,6 +1297,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvLifeExpNum
 id uniform
 id unlabeled
 id up
@@ -1349,6 +1356,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_demographic_info
 layout activity_forum
 layout activity_main
 layout app_bar_forum

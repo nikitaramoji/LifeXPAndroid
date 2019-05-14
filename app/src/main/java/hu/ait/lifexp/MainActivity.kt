@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         ).addOnSuccessListener {
             Toast.makeText(this@MainActivity, "LOGIN OK", Toast.LENGTH_LONG).show()
 
-            startActivity(Intent(this@MainActivity, ForumActivity::class.java))
+            startActivity(Intent(this@MainActivity, DemographicInfoActivity::class.java))
         }.addOnFailureListener {
             Toast.makeText(this@MainActivity, "Login failed ${it.message}", Toast.LENGTH_LONG).show()
         }

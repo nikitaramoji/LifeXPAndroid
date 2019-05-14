@@ -25,7 +25,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="hu.ait.lifexp.DemographicInfoActivity" >
+        </activity>
         <activity
             android:name="hu.ait.lifexp.ForumActivity"
             android:label="@string/title_list_forum"
