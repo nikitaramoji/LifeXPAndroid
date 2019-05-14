@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39117834650",
+    "firebase_url": "https://lifexp-47b3d.firebaseio.com",
+    "project_id": "lifexp-47b3d",
+    "storage_bucket": "lifexp-47b3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39117834650:android:6f775c164bd2ff74",
+        "android_client_info": {
+          "package_name": "hu.ait.lifexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39117834650-22iqhgig9bke2tg9a7hnkbfn2onrnh9j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hu.ait.lifexp",
+            "certificate_hash": "40ace868d6b55d2204677d36461eafefaaae5766"
+          }
+        },
+        {
+          "client_id": "39117834650-8mpm954jbdtr8395dnciebtfrhskfnjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPhUqtO4r6tInFe-HOM3BsHPqQHkHxh0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39117834650-8mpm954jbdtr8395dnciebtfrhskfnjs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
