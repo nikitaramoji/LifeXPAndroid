@@ -42,7 +42,6 @@ class DemographicInfoActivity : AppCompatActivity() {
                     if(lifeExpResponse != null) {
                         lifeExpNum = lifeExpResponse.toInt()
                         tvLifeExpNum.text = lifeExpNum.toString()
-                        btnContinue.visibility = View.VISIBLE
                         uploadLifeExpDem()
                     }
                 }
@@ -80,23 +79,23 @@ class DemographicInfoActivity : AppCompatActivity() {
     }
 
     fun uploadLifeExpDem() {
-        Log.v("NIKITA", "GETTING TO uploadLifeExpDem")
+        val db = FirebaseFirestore.getInstance()
+
+        val users = db.collection("users")
+
         val demPost = DemographicPost(
             FirebaseAuth.getInstance().currentUser!!.uid,
             tvLifeExpNum.text.toString()
         )
 
-        var demPostsDatabase = FirebaseFirestore.getInstance().collection(
-            "demographics"
-        )
-
-        demPostsDatabase.add(
+        users.document(FirebaseAuth.getInstance().currentUser!!.uid).set(
             demPost
         ).addOnSuccessListener {
             Toast.makeText(
                 this@DemographicInfoActivity,
                 "Life Expectancy Number Saved", Toast.LENGTH_LONG
             ).show()
+            btnContinue.visibility = View.VISIBLE
         }.addOnFailureListener {
             Toast.makeText(
                 this@DemographicInfoActivity,
