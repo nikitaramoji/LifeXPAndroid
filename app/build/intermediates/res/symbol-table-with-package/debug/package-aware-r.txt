@@ -1100,6 +1100,7 @@ id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_demographic_info
 id add
 id adjust_height
 id adjust_width
@@ -1113,8 +1114,10 @@ id beginning
 id blocking
 id bottom
 id btnCalculateLifeXP
+id btnContinue
 id btnLogin
 id btnRegister
+id btnUpdateLifeXP
 id buttonPanel
 id cancel_action
 id center
@@ -1152,7 +1155,11 @@ id enterAlwaysCollapsed
 id etBirthday
 id etCountry
 id etEmail
+id etExercise
+id etFastFood
 id etPassword
+id etSleep
+id etWork
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1298,6 +1305,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tvLifeExpNum
+id tvUpdatedLifeExpNum
 id uniform
 id unlabeled
 id up
@@ -1358,6 +1366,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_demographic_info
 layout activity_forum
+layout activity_habit_info
 layout activity_main
 layout app_bar_forum
 layout content_forum
@@ -1489,6 +1498,7 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_habit_info
 string title_list_forum
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

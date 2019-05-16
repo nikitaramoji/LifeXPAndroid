@@ -27,6 +27,11 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="hu.ait.lifexp.HabitInfoActivity"
+            android:label="@string/title_activity_habit_info"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
         <activity android:name="hu.ait.lifexp.DemographicInfoActivity" >
         </activity>
         <activity

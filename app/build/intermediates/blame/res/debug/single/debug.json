@@ -128,6 +128,10 @@
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/layout_activity_habit_info.xml.flat",
+        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/layout/activity_habit_info.xml"
+    },
+    {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/color-v23_abc_tint_spinner.xml.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/color-v23/abc_tint_spinner.xml"
     },

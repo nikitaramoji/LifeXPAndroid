@@ -7,7 +7,7 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.1"
-    timestamp="1557841725325"
+    timestamp="1558013188172"
     token="-7337905478444566588"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -19,10 +19,10 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="40" />
+        duration="52" />
     <task
         name="verifier"
-        duration="9" />
+        duration="3" />
 
     <artifact
         location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -30,14 +30,10 @@
 
     <build
         build-mode="FULL"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1557838393824"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1558010627762"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
@@ -49,10 +45,13 @@
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -61,13 +60,13 @@
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -75,52 +74,62 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1557840506644"
+        ir-eligibility="FIELD_REMOVED"
+        timestamp="1558011599759"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ANNOTATION_CHANGE"
-        timestamp="1557841416049"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1558012560607"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="METHOD_DELETED"
+        timestamp="1558012638684"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1557841725325"
+        timestamp="1558013188172"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
