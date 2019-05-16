@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Log.VERBOSE
 import android.view.View
+import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -35,20 +36,22 @@ class DemographicInfoActivity : AppCompatActivity() {
         var lifeExpNum: Int = -1
 
         btnCalculateLifeXP.setOnClickListener {
-            var call = calculateLifeXP()
-            call.enqueue(object : Callback<LifeExpectancyResult> {
-                override fun onResponse(call: Call<LifeExpectancyResult>, response: Response<LifeExpectancyResult>) {
-                    val lifeExpResponse = response.body()?.total_life_expectancy
-                    if(lifeExpResponse != null) {
-                        lifeExpNum = lifeExpResponse.toInt()
-                        tvLifeExpNum.text = lifeExpNum.toString()
-                        uploadLifeExpDem()
+            if(checkAllFieldsFilled()) {
+                var call = calculateLifeXP()
+                call.enqueue(object : Callback<LifeExpectancyResult> {
+                    override fun onResponse(call: Call<LifeExpectancyResult>, response: Response<LifeExpectancyResult>) {
+                        val lifeExpResponse = response.body()?.total_life_expectancy
+                        if(lifeExpResponse != null) {
+                            lifeExpNum = lifeExpResponse.toInt()
+                            tvLifeExpNum.text = lifeExpNum.toString()
+                            uploadLifeExpDem()
+                        }
                     }
-                }
-                override fun onFailure(call: Call<LifeExpectancyResult>, t: Throwable) {
-                    tvLifeExpNum.text = t.message
-                }
-            })
+                    override fun onFailure(call: Call<LifeExpectancyResult>, t: Throwable) {
+                        tvLifeExpNum.text = t.message
+                    }
+                })
+            }
         }
 
         btnContinue.setOnClickListener {
@@ -59,6 +62,25 @@ class DemographicInfoActivity : AppCompatActivity() {
                 intentDetails.putExtra(KEY_LIFE_EXPECTANCY, lifeExpNum)
                 startActivity(intentDetails)
         }
+    }
+
+    private fun checkAllFieldsFilled(): Boolean {
+        var allFieldsFilled = true
+        if(isEmpty(etBirthday)) {
+            etBirthday.setError("This field cannot be empty")
+            allFieldsFilled = false
+        }
+
+        if(isEmpty(etCountry)) {
+            etCountry.setError("This field cannot be empty")
+            allFieldsFilled = false
+        }
+
+        return allFieldsFilled
+    }
+
+    private fun isEmpty(etText: EditText): Boolean {
+        return if (etText.text.toString().trim { it <= ' ' }.length > 0) false else true
     }
 
     fun calculateLifeXP() : Call<LifeExpectancyResult> {
