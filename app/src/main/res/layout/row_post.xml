@@ -14,7 +14,7 @@
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
         <TextView
                 android:id="@+id/tvHabitName"
@@ -22,22 +22,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/actor"
-                android:paddingLeft="4dp" android:paddingRight="4dp"/>
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"/>
 
         <Button
                 android:id="@+id/btnDeletePost"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
-                android:text="Delete" android:textColor="@color/colorPrimaryDark" android:fontFamily="@font/actor"
-                android:background="@color/common_google_signin_btn_text_dark_pressed"/>
+                android:text="Delete"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:fontFamily="@font/actor"
+                android:background="#00BCD4"/>
 
         <Button
                 android:id="@+id/btnLogHabit"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
-                android:text="Log" android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:text="Log"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:fontFamily="@font/actor"
-                android:background="@color/colorPrimaryDark" android:paddingRight="0dp"/>
+                android:background="@color/colorPrimaryDark"
+                android:paddingRight="0dp"/>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>

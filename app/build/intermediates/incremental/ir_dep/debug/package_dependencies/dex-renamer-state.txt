@@ -1,7 +1,7 @@
-#Sat May 18 22:37:02 CEST 2019
-base.0=/Users/laurenweiss/Documents/GitHub/LifeXPAndroid/app/build/intermediates/transforms/dexMerger/debug/10
+#Sat May 18 23:59:09 CEST 2019
+base.0=/Users/Nikita/AndroidStudioProjects/LifeXPAndroid/app/build/intermediates/transforms/dexMerger/debug/10
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/Users/laurenweiss/Documents/GitHub/LifeXPAndroid/app/build/intermediates/transforms/dexMerger/debug/10
+base.1=/Users/Nikita/AndroidStudioProjects/LifeXPAndroid/app/build/intermediates/transforms/dexMerger/debug/10

@@ -51,7 +51,8 @@
             android:layout_gravity="end|bottom"
             android:src="@drawable/ic_add"
             android:tint="@android:color/white"
-            android:layout_margin="16dp" app:backgroundTint="@color/colorPrimaryDark"/>
+            android:layout_margin="16dp"
+            app:backgroundTint="#00BCD4"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerPosts"

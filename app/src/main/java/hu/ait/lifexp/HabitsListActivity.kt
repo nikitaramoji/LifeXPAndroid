@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -35,9 +36,7 @@ class HabitsListActivity : AppCompatActivity() {
         postsAdapter = PostsAdapter(this,
             FirebaseAuth.getInstance().currentUser!!.uid)
 
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.reverseLayout = true
-        layoutManager.stackFromEnd = true
+        val layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         recyclerPosts.layoutManager = layoutManager
 
         recyclerPosts.adapter = postsAdapter

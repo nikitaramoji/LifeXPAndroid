@@ -38,7 +38,6 @@
             android:id="@+id/etBirthday"
             android:hint="YYYY-MM-DD"
             android:inputType="date"
-            android:text="1998-02-15"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,8 +63,6 @@
             android:hint="United States"
             android:inputType="text"
             android:backgroundTint="@android:color/white"
-
-            android:text="United States"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
