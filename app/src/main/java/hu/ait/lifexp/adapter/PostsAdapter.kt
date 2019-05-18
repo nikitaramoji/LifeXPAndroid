@@ -1,6 +1,10 @@
 package hu.ait.lifexp.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.database.Cursor
+import android.net.Uri
+import android.provider.CalendarContract
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 import hu.ait.lifexp.R
 import hu.ait.lifexp.data.NewHabitPost
 import kotlinx.android.synthetic.main.row_post.view.*
+import java.util.*
 
 class PostsAdapter(
     private val context: Context,
@@ -43,7 +48,21 @@ class PostsAdapter(
         holder.btnDeletePost.setOnClickListener {
             removePost(holder.adapterPosition)
         }
+        holder.btnLogHabit.setOnClickListener {
+            updateCalendar(habitName)
+        }
         setAnimation(holder.itemView, position)
+    }
+
+    fun updateCalendar(habitName: String) {
+        val intent = Intent(Intent.ACTION_INSERT)
+            .setData(CalendarContract.Events.CONTENT_URI)
+            .putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true)
+            .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, Calendar.getInstance().timeInMillis)
+            .putExtra(CalendarContract.Events.TITLE, habitName)
+            .putExtra(CalendarContract.Events.DESCRIPTION, "")
+            .putExtra(CalendarContract.Events.EVENT_LOCATION, "")
+        context.startActivity(intent)
     }
 
     fun addPost(post: NewHabitPost, key: String) {
@@ -94,5 +113,6 @@ class PostsAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvHabitName: TextView = itemView.tvHabitName
         val btnDeletePost: Button = itemView.btnDeletePost
+        val btnLogHabit: Button = itemView.btnLogHabit
     }
 }

@@ -3,6 +3,8 @@
           package="hu.ait.lifexp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <application
             android:name=".MyApplication"
@@ -13,6 +15,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
+        <activity android:name=".LogHabitActivity">
+        </activity>
+        <activity android:name=".HabitLogViewActivity">
+        </activity>
         <activity android:name=".LifeExpectancyChartActivity">
         </activity>
         <activity android:name=".NewHabitActivity">

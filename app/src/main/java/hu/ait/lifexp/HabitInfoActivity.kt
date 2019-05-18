@@ -145,10 +145,6 @@ class HabitInfoActivity : AppCompatActivity() {
 
     fun uploadLifeExpDem() {
         val db = FirebaseFirestore.getInstance()
-        val settings = FirebaseFirestoreSettings.Builder()
-            .setTimestampsInSnapshotsEnabled(true)
-            .build()
-        db.firestoreSettings = settings
         val expectancies = db.collection(
             "users"
         ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection("expectancies")

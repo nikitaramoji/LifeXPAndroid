@@ -21,6 +21,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.google.firebase.firestore.FirebaseFirestoreSettings
+
+
 
 class DemographicInfoActivity : AppCompatActivity() {
 
@@ -92,7 +95,7 @@ class DemographicInfoActivity : AppCompatActivity() {
         var retrofit = Retrofit.Builder().baseUrl("http://54.72.28.201").addConverterFactory(GsonConverterFactory.create()).build()
 
         var lifeExpectancyAPI = retrofit.create(LifeExpectancyAPI::class.java)
-        var sexButton : RadioButton = findViewById(radioSex.checkedRadioButtonId)
+        var sexButton : RadioButton = this.findViewById(radioSex.checkedRadioButtonId)
         val call = lifeExpectancyAPI.getLifeExpectancyDetails(
             sexButton.text.toString(),
             etCountry.text.toString(),
@@ -110,8 +113,7 @@ class DemographicInfoActivity : AppCompatActivity() {
         val settings = FirebaseFirestoreSettings.Builder()
             .setTimestampsInSnapshotsEnabled(true)
             .build()
-        db.firestoreSettings = settings
-
+        db.setFirestoreSettings(settings)
         val users = db.collection("users")
 
         val demPost = DemographicPost(

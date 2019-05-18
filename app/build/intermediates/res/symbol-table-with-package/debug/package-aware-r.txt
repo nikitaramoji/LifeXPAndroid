@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array months_array
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -199,6 +200,8 @@ attr counterMaxLength
 attr counterOverflowTextAppearance
 attr counterTextAppearance
 attr customNavigationLayout
+attr datePicker
+attr daysNames
 attr defaultQueryHint
 attr dialogCornerRadius
 attr dialogPreferredPadding
@@ -255,8 +258,11 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
+attr forwardButtonSrc
 attr gapBetweenBars
 attr goIcon
+attr headerColor
+attr headerLabelColor
 attr headerLayout
 attr height
 attr helperText
@@ -387,6 +393,7 @@ attr maxButtonHeight
 attr maxImageSize
 attr measureWithLargestChild
 attr menu
+attr monthsNames
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
@@ -411,6 +418,7 @@ attr popupTheme
 attr popupWindowStyle
 attr preserveIconSpacing
 attr pressedTranslationZ
+attr previousButtonSrc
 attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
@@ -431,6 +439,7 @@ attr searchViewStyle
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
+attr selectionColor
 attr showAsAction
 attr showDividers
 attr showMotionSpec
@@ -542,6 +551,7 @@ attr titleMargins
 attr titleTextAppearance
 attr titleTextColor
 attr titleTextStyle
+attr todayLabelColor
 attr toolbarId
 attr toolbarNavigationButtonStyle
 attr toolbarStyle
@@ -625,6 +635,9 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color currentMonthDayColor
+color daysLabelColor
+color defaultColor
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -686,6 +699,7 @@ color mtrl_textinput_default_box_stroke_color
 color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_hovered_box_stroke_color
+color nextMonthDayColor
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -924,6 +938,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen row_height
 dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1019,6 +1034,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_color_circle_selector
+drawable background_transparent
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1047,6 +1064,8 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_add
+drawable ic_arrow_left
+drawable ic_arrow_right
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
@@ -1121,10 +1140,15 @@ id btnCalculateLifeXP
 id btnContinue
 id btnCreate
 id btnDeletePost
+id btnLogHabit
 id btnLogin
 id btnRegister
 id btnUpdateLifeXP
 id buttonPanel
+id calendarGridView
+id calendarHeader
+id calendarViewPager
+id calendar_header
 id cancel_action
 id card_view
 id center
@@ -1141,9 +1165,12 @@ id container
 id content
 id contentPanel
 id coordinator
+id currentDateLabel
 id custom
 id customPanel
 id dark
+id dayIcon
+id dayLabel
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1154,6 +1181,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id divider
 id edit_query
 id end
 id end_padder
@@ -1178,6 +1206,8 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id forwardButton
+id fridayLabel
 id ghost_view
 id gone
 id group_divider
@@ -1206,6 +1236,7 @@ id media_actions
 id message
 id middle
 id mini
+id mondayLabel
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1226,6 +1257,7 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id previousButton
 id progress_circular
 id progress_horizontal
 id radio
@@ -1236,6 +1268,7 @@ id recyclerPosts
 id right
 id right_icon
 id right_side
+id saturdayLabel
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1279,6 +1312,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id sundayLabel
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1292,6 +1326,7 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id thursdayLabel
 id time
 id title
 id titleDividerNoCustom
@@ -1306,6 +1341,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tuesdayLabel
 id tvHabitName
 id tvLifeExpNum
 id tvUpdatedLifeExpNum
@@ -1316,6 +1352,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id wednesdayLabel
 id wide
 id withText
 id wrap
@@ -1374,6 +1411,10 @@ layout activity_habits_list
 layout activity_life_expectancy_chart
 layout activity_main
 layout activity_new_habit
+layout calendar_view
+layout calendar_view_day
+layout calendar_view_grid
+layout calendar_view_picker_day
 layout content_habits_list
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1481,6 +1522,7 @@ string default_web_client_id
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url
+string friday
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -1488,6 +1530,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string large_text
+string monday
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
 string nav_header_subtitle
@@ -1500,12 +1543,17 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string saturday
 string search_menu_title
 string status_bar_notification_info_overflow
+string sunday
+string thursday
 string title_activity_habit_info
 string title_activity_habits_list
 string title_activity_new_habit
 string title_list_forum
+string tuesday
+string wednesday
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -2032,6 +2080,7 @@ styleable BottomAppBar backgroundTint fabAlignmentMode fabCradleMargin fabCradle
 styleable BottomNavigationView elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout behavior_fitToContents behavior_hideable behavior_peekHeight behavior_skipCollapsed
 styleable ButtonBarLayout allowStacking
+styleable CalendarView datePicker daysNames forwardButtonSrc headerColor headerLabelColor monthsNames previousButtonSrc selectionColor todayLabelColor
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
