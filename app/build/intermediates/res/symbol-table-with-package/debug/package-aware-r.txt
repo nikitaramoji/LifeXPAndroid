@@ -25,7 +25,11 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
 array months_array
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1034,6 +1038,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
+drawable background2
 drawable background_color_circle_selector
 drawable background_transparent
 drawable common_full_open_on_phone
@@ -1063,6 +1069,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable habitpic
+drawable hi
 drawable ic_add
 drawable ic_arrow_left
 drawable ic_arrow_right
@@ -1077,6 +1085,7 @@ drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable logion
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1095,6 +1104,8 @@ drawable notify_panel_notification_icon_bg
 drawable side_nav_bar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font actor
+font rock_salt
 id ALT
 id CTRL
 id FUNCTION
@@ -1219,6 +1230,9 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
+id imageView5
+id imageView6
 id info
 id invisible
 id italic
@@ -1322,6 +1336,20 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
+id textView10
+id textView11
+id textView12
+id textView13
+id textView14
+id textView2
+id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
+id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1411,6 +1439,7 @@ layout activity_habits_list
 layout activity_life_expectancy_chart
 layout activity_main
 layout activity_new_habit
+layout activity_splash
 layout calendar_view
 layout calendar_view_day
 layout calendar_view_grid

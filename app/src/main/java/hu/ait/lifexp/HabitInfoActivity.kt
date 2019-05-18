@@ -157,10 +157,10 @@ class HabitInfoActivity : AppCompatActivity() {
         expectancies.add(
             post
         ).addOnSuccessListener {
-            Toast.makeText(
-                this@HabitInfoActivity,
-                "Updated Life Expectancy Number Saved", Toast.LENGTH_LONG
-            ).show()
+//            Toast.makeText(
+//                this@HabitInfoActivity,
+//                "Updated Life Expectancy Number Saved", Toast.LENGTH_LONG
+//            ).show()
             btnContinue.visibility = View.VISIBLE
         }.addOnFailureListener {
             Toast.makeText(

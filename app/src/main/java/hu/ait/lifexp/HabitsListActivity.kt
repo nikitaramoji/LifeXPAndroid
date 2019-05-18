@@ -22,6 +22,10 @@ class HabitsListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_habits_list)
         setSupportActionBar(toolbar)
+        setTitle("My Habits")
+
+
+
         fab.setOnClickListener { view ->
             startActivity(
                 Intent(this@HabitsListActivity,

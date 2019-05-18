@@ -28,13 +28,28 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="hu.ait.lifexp.LogHabitActivity" >
+        <activity
+            android:name="hu.ait.lifexp.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name="hu.ait.lifexp.HabitLogViewActivity" >
+        <activity
+            android:name="hu.ait.lifexp.LogHabitActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="hu.ait.lifexp.HabitLogViewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity android:name="hu.ait.lifexp.LifeExpectancyChartActivity" >
         </activity>
-        <activity android:name="hu.ait.lifexp.NewHabitActivity" >
+        <activity
+            android:name="hu.ait.lifexp.NewHabitActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="hu.ait.lifexp.HabitsListActivity"
@@ -46,20 +61,24 @@
             android:label="@string/title_activity_habit_info"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="hu.ait.lifexp.DemographicInfoActivity" >
+        <activity
+            android:name="hu.ait.lifexp.DemographicInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
             android:name="hu.ait.lifexp.ForumActivity"
             android:label="@string/title_list_forum"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="hu.ait.lifexp.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name="hu.ait.lifexp.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

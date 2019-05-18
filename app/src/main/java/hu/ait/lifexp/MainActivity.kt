@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(
             etEmail.text.toString(), etPassword.text.toString()
         ).addOnSuccessListener {
-            Toast.makeText(this@MainActivity, "LOGIN OK", Toast.LENGTH_LONG).show()
+           // Toast.makeText(this@MainActivity, "LOGIN OK", Toast.LENGTH_LONG).show()
 
             startActivity(Intent(this@MainActivity, DemographicInfoActivity::class.java))
         }.addOnFailureListener {

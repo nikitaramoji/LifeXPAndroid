@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/activity_new_habit"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:paddingBottom="@dimen/activity_vertical_margin"
-              android:paddingLeft="@dimen/activity_horizontal_margin"
-              android:paddingRight="@dimen/activity_horizontal_margin"
-              android:paddingTop="@dimen/activity_vertical_margin"
-              android:orientation="vertical">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/activity_new_habit"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:orientation="vertical">
 
+    <ImageView
+            android:layout_width="430dp"
+            android:layout_height="747dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/imageView" app:srcCompat="@drawable/habitpic"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:alpha="0.7"/>
     <EditText
             android:id="@+id/etNewHabit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="New Habit Name"
-            android:maxLines="1" />
-
-
-    <Button
-            android:id="@+id/btnCreate"
+            android:maxLines="1" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/actor"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:backgroundTint="@android:color/white"
+            android:textColorHint="@android:color/white" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnCreate" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintVertical_bias="0.22000003"/>
+    <TextView
+            android:text="What do you want to call your new habit?"
+            android:textAlignment="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create"/>
-
-
-</LinearLayout>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textView" android:fontFamily="@font/actor" android:textSize="24sp"
+            android:textColor="@android:color/white" android:textStyle="bold" android:layout_marginTop="180dp"
+            app:layout_constraintTop_toTopOf="@+id/imageView"/>
+    <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/actor" android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="@+id/etNewHabit"
+            android:layout_marginRight="16dp" android:textStyle="bold"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.31"/>
+</android.support.constraint.ConstraintLayout>

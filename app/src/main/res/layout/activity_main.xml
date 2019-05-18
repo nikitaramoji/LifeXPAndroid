@@ -1,69 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        >
 
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
+    <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="56dp"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp">
+            android:padding="12dp"
+            android:onClick="registerClick"
+            android:text="Register"
+            android:fontFamily="@font/actor" android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="88dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btnLogin"/>
+    <ImageView
+            android:layout_width="424dp"
+            android:layout_height="737dp" app:srcCompat="@drawable/logion"
+            android:id="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="0dp" android:paddingBottom="0dp" android:paddingLeft="0dp" android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:cropToPadding="true" android:adjustViewBounds="true"
+            android:background="@color/common_google_signin_btn_text_dark_default"/>
+    <EditText android:id="@+id/etEmail"
+              android:textColorHint="@android:color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="textEmailAddress"
+              android:text="nikita.ramoji@gmail.com"
+              android:backgroundTint="@android:color/white"
+              android:fontFamily="@font/actor"
 
-        <ImageView android:src="@mipmap/ic_launcher"
-                   android:layout_width="wrap_content"
-                   android:layout_height="72dp"
-                   android:layout_marginBottom="24dp"
-                   android:layout_gravity="center_horizontal" />
+              android:hint="email"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginTop="300dp" app:layout_constraintTop_toTopOf="parent"
+              android:textColor="@android:color/white"/>
+    <EditText android:id="@+id/etPassword"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="textPassword"
+              android:text="123456"
+              android:hint="Password"
+              android:backgroundTint="@android:color/white"
+              android:fontFamily="@font/actor"
+              android:textColorHint="@android:color/white"
+              app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/etEmail"
+              android:textColor="@android:color/white"/>
+    <TextView
+            android:text=" LifeXP "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
 
-        <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/etEmail"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:inputType="textEmailAddress"
-                      android:text="nikita.ramoji@gmail.com"
-                      android:hint="email" />
-        </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/etPassword"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:inputType="textPassword"
-                      android:text="123456"
-                      android:hint="Password"/>
-        </android.support.design.widget.TextInputLayout>
+            android:fontFamily="@font/rock_salt" android:textSize="36sp" android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"/>
+    <TextView
+            android:text="Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" android:fontFamily="@font/actor"
+            android:textSize="18sp" android:textColor="@android:color/white" android:textStyle="bold"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" android:fontFamily="@font/actor"
+            android:textSize="18sp" android:textColor="@android:color/white" android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/etPassword"/>
+    <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:onClick="loginClick"
+            android:text="Login" app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/actor" android:textSize="18sp"
+            android:background="@color/colorPrimaryDark" android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword"/>
 
-        <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="12dp"
-                android:padding="12dp"
-                android:onClick="loginClick"
-                android:text="Login"/>
-
-        <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:onClick="registerClick"
-                android:text="Register"/>
-
-    </LinearLayout>
-</ScrollView>
+</android.support.constraint.ConstraintLayout>

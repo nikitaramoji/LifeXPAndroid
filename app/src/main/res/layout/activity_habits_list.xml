@@ -21,12 +21,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:toolbarId="@+id/toolbar"
+
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary">
 
             <com.flaviofaria.kenburnsview.KenBurnsView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" android:background="@color/colorPrimaryDark"
+                     android:layout_gravity="center"
+                    android:fontFamily="@font/actor"
+            />
 
             <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -47,7 +51,7 @@
             android:layout_gravity="end|bottom"
             android:src="@drawable/ic_add"
             android:tint="@android:color/white"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp" app:backgroundTint="@color/colorPrimaryDark"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerPosts"

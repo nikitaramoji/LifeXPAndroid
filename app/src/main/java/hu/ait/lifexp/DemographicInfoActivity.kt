@@ -124,10 +124,10 @@ class DemographicInfoActivity : AppCompatActivity() {
         users.document(FirebaseAuth.getInstance().currentUser!!.uid).set(
             demPost
         ).addOnSuccessListener {
-            Toast.makeText(
-                this@DemographicInfoActivity,
-                "Life Expectancy Number Saved", Toast.LENGTH_LONG
-            ).show()
+//            Toast.makeText(
+//                this@DemographicInfoActivity,
+//                "Life Expectancy Number Saved", Toast.LENGTH_LONG
+//            ).show()
             btnContinue.visibility = View.VISIBLE
         }.addOnFailureListener {
             Toast.makeText(
