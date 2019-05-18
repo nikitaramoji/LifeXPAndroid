@@ -24,10 +24,6 @@
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/menu_activity_forum_drawer.xml.flat",
-        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/menu/activity_forum_drawer.xml"
-    },
-    {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
@@ -118,6 +114,10 @@
     {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/anim_abc_slide_out_top.xml.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/menu_menu.xml.flat",
+        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/menu/menu.xml"
     },
     {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/layout_abc_search_view.xml.flat",
@@ -508,6 +508,10 @@
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/color/abc_hint_foreground_material_light.xml"
     },
     {
+        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/layout_activity_life_expectancy_chart.xml.flat",
+        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/layout/activity_life_expectancy_chart.xml"
+    },
+    {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
     },
@@ -828,16 +832,8 @@
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/menu_menu_habits_list.xml.flat",
-        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/menu/menu_habits_list.xml"
-    },
-    {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/218a9edbe6d7edf074be1d6b0a22da89/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
-    },
-    {
-        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/menu_nav_logout.xml.flat",
-        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/menu/nav_logout.xml"
     },
     {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
@@ -1662,10 +1658,6 @@
     {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/Users/Nikita/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/74b50af96456c70f396b437220cc3199/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
-        "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/menu_forum.xml.flat",
-        "source": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/src/main/res/menu/forum.xml"
     },
     {
         "merged": "/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",

@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_habit_info.*
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.Timestamp
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import hu.ait.lifexp.data.ExpectancyPost
 
 
@@ -144,7 +145,10 @@ class HabitInfoActivity : AppCompatActivity() {
 
     fun uploadLifeExpDem() {
         val db = FirebaseFirestore.getInstance()
-
+        val settings = FirebaseFirestoreSettings.Builder()
+            .setTimestampsInSnapshotsEnabled(true)
+            .build()
+        db.firestoreSettings = settings
         val expectancies = db.collection(
             "users"
         ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection("expectancies")

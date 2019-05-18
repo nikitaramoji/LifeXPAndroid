@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import hu.ait.lifexp.data.NewHabitPost
 import kotlinx.android.synthetic.main.activity_new_habit.*
 
@@ -25,6 +26,10 @@ class NewHabitActivity : AppCompatActivity() {
 
     fun createNewHabit() {
         val db = FirebaseFirestore.getInstance()
+        val settings = FirebaseFirestoreSettings.Builder()
+            .setTimestampsInSnapshotsEnabled(true)
+            .build()
+        db.firestoreSettings = settings
         val habits = db.collection(
             "users"
         ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection("habits")

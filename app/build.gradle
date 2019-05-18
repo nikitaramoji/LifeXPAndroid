@@ -16,6 +16,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     repositories {
+        maven { url 'https://jitpack.io' }
     }
     buildTypes {
         release {
@@ -41,6 +42,8 @@ dependencies {
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 }
 

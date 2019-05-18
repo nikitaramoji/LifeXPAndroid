@@ -26,6 +26,7 @@
             android:id="@+id/etBirthday"
             android:hint="YYYY-MM-DD"
             android:inputType="date"
+            android:text="1998-02-15"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -40,6 +41,7 @@
             android:id="@+id/etCountry"
             android:hint="United States"
             android:inputType="text"
+            android:text="United States"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

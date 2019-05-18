@@ -1099,7 +1099,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1132,6 +1131,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id chart
 id checkbox
 id chronometer
 id clip_horizontal
@@ -1209,13 +1209,8 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id nav_camera
-id nav_gallery
+id nav_chart
 id nav_logout
-id nav_manage
-id nav_send
-id nav_share
-id nav_slideshow
 id navigation_header_container
 id never
 id none
@@ -1314,6 +1309,7 @@ id transition_transform
 id tvHabitName
 id tvLifeExpNum
 id tvUpdatedLifeExpNum
+id tvXMax
 id uniform
 id unlabeled
 id up
@@ -1375,6 +1371,7 @@ layout abc_tooltip
 layout activity_demographic_info
 layout activity_habit_info
 layout activity_habits_list
+layout activity_life_expectancy_chart
 layout activity_main
 layout activity_new_habit
 layout content_habits_list
@@ -1414,10 +1411,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu activity_forum_drawer
-menu forum
-menu menu_habits_list
-menu nav_logout
+menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

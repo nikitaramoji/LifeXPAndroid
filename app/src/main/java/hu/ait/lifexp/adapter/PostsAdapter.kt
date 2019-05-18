@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import hu.ait.lifexp.R
 import hu.ait.lifexp.data.NewHabitPost
 import kotlinx.android.synthetic.main.row_post.view.*
@@ -53,6 +54,10 @@ class PostsAdapter(
 
     private fun removePost(index: Int) {
         val db = FirebaseFirestore.getInstance()
+        val settings = FirebaseFirestoreSettings.Builder()
+            .setTimestampsInSnapshotsEnabled(true)
+            .build()
+        db.firestoreSettings = settings
         val habits = db.collection(
             "users"
         ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection(

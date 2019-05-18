@@ -44,6 +44,12 @@ class DemographicInfoActivity : AppCompatActivity() {
                             lifeExpNum = lifeExpResponse.toInt()
                             tvLifeExpNum.text = lifeExpNum.toString()
                             uploadLifeExpDem()
+                        } else {
+                            Toast.makeText(
+                                this@DemographicInfoActivity,
+                                "The fields you entered cannot be used to calculate a life expectancy, please try again with different values.",
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
                     }
                     override fun onFailure(call: Call<LifeExpectancyResult>, t: Throwable) {
@@ -101,6 +107,10 @@ class DemographicInfoActivity : AppCompatActivity() {
 
     fun uploadLifeExpDem() {
         val db = FirebaseFirestore.getInstance()
+        val settings = FirebaseFirestoreSettings.Builder()
+            .setTimestampsInSnapshotsEnabled(true)
+            .build()
+        db.firestoreSettings = settings
 
         val users = db.collection("users")
 

@@ -27,6 +27,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="hu.ait.lifexp.LifeExpectancyChartActivity" >
+        </activity>
         <activity android:name="hu.ait.lifexp.NewHabitActivity" >
         </activity>
         <activity
