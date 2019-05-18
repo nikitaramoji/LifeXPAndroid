@@ -1,5 +1,6 @@
 package hu.ait.lifexp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +9,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_habit_info.*
 import android.widget.EditText
-
+import android.widget.Toast
+import com.google.firebase.Timestamp
+import hu.ait.lifexp.data.ExpectancyPost
 
 
 class HabitInfoActivity : AppCompatActivity() {
@@ -24,20 +27,25 @@ class HabitInfoActivity : AppCompatActivity() {
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
-                    Log.d("NIKITA", "DocumentSnapshot data: ${document.data}")
                     lifeExpNum = document.data?.get("demographicExpectancy").toString().toInt()
-                } else {
-                    Log.d("NIKITA", "No such document")
                 }
             }
             .addOnFailureListener { exception ->
-                Log.d("NIKITA", "get failed with ", exception)
+                Toast.makeText(
+                    this@HabitInfoActivity,
+                    "Error: ${exception.message}", Toast.LENGTH_LONG
+                ).show()
             }
 
         btnUpdateLifeXP.setOnClickListener {
             if(checkAllFieldsFilled()) {
                 updateLifeXP()
             }
+        }
+
+        btnContinue.setOnClickListener {
+            startActivity(Intent(this@HabitInfoActivity,
+                HabitsListActivity::class.java))
         }
     }
 
@@ -72,7 +80,7 @@ class HabitInfoActivity : AppCompatActivity() {
     fun updateLifeXP() {
         lifeExpNum += (updateByExercise() + updateByFastFood() + updateBySleep() + updateByWork())
         tvUpdatedLifeExpNum.text = lifeExpNum.toString()
-        btnContinue.visibility = View.VISIBLE
+        uploadLifeExpDem()
     }
 
     fun updateByExercise(): Int {
@@ -131,6 +139,34 @@ class HabitInfoActivity : AppCompatActivity() {
             return -1
         } else {
             return -2
+        }
+    }
+
+    fun uploadLifeExpDem() {
+        val db = FirebaseFirestore.getInstance()
+
+        val expectancies = db.collection(
+            "users"
+        ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection("expectancies")
+
+        val post = ExpectancyPost(
+            lifeExpNum.toString(),
+            Timestamp.now()
+        )
+
+        expectancies.add(
+            post
+        ).addOnSuccessListener {
+            Toast.makeText(
+                this@HabitInfoActivity,
+                "Updated Life Expectancy Number Saved", Toast.LENGTH_LONG
+            ).show()
+            btnContinue.visibility = View.VISIBLE
+        }.addOnFailureListener {
+            Toast.makeText(
+                this@HabitInfoActivity,
+                "Error: ${it.message}", Toast.LENGTH_LONG
+            ).show()
         }
     }
 }

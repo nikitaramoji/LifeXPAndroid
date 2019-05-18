@@ -16,7 +16,6 @@ import hu.ait.lifexp.data.DemographicPost
 import hu.ait.lifexp.data.LifeExpectancyResult
 import hu.ait.lifexp.network.LifeExpectancyAPI
 import kotlinx.android.synthetic.main.activity_demographic_info.*
-import kotlinx.android.synthetic.main.activity_forum.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

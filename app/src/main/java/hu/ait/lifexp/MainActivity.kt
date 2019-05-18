@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
                     .setDisplayName(userNameFromEmail(user.email!!))
                     .build()
             )
-
             Toast.makeText(this@MainActivity, "REGISTER OK", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
             Toast.makeText(this@MainActivity, "Register failed ${it.message}", Toast.LENGTH_LONG).show()

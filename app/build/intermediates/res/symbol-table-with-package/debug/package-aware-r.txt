@@ -788,6 +788,7 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen app_bar_height
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -923,6 +924,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1044,6 +1046,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
@@ -1101,12 +1104,14 @@ id action_text
 id actions
 id activity_chooser_view_content
 id activity_demographic_info
+id activity_new_habit
 id add
 id adjust_height
 id adjust_width
 id alertTitle
 id all
 id always
+id app_bar
 id async
 id auto
 id barrier
@@ -1115,11 +1120,14 @@ id blocking
 id bottom
 id btnCalculateLifeXP
 id btnContinue
+id btnCreate
+id btnDeletePost
 id btnLogin
 id btnRegister
 id btnUpdateLifeXP
 id buttonPanel
 id cancel_action
+id card_view
 id center
 id center_horizontal
 id center_vertical
@@ -1146,7 +1154,6 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id drawer_layout
 id edit_query
 id end
 id end_padder
@@ -1157,6 +1164,7 @@ id etCountry
 id etEmail
 id etExercise
 id etFastFood
+id etNewHabit
 id etPassword
 id etSleep
 id etWork
@@ -1181,7 +1189,6 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id imageView
 id info
 id invisible
 id italic
@@ -1209,7 +1216,6 @@ id nav_manage
 id nav_send
 id nav_share
 id nav_slideshow
-id nav_view
 id navigation_header_container
 id never
 id none
@@ -1231,6 +1237,7 @@ id radio
 id radioFemale
 id radioMale
 id radioSex
+id recyclerPosts
 id right
 id right_icon
 id right_side
@@ -1286,7 +1293,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1296,6 +1302,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toolbar
+id toolbar_layout
 id top
 id topPanel
 id touch_outside
@@ -1304,6 +1311,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvHabitName
 id tvLifeExpNum
 id tvUpdatedLifeExpNum
 id uniform
@@ -1365,11 +1373,11 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_demographic_info
-layout activity_forum
 layout activity_habit_info
+layout activity_habits_list
 layout activity_main
-layout app_bar_forum
-layout content_forum
+layout activity_new_habit
+layout content_habits_list
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1386,7 +1394,6 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
-layout nav_header_forum
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1402,12 +1409,14 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_post
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu activity_forum_drawer
 menu forum
+menu menu_habits_list
 menu nav_logout
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1484,6 +1493,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string large_text
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
 string nav_header_subtitle
@@ -1499,6 +1509,8 @@ string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_habit_info
+string title_activity_habits_list
+string title_activity_new_habit
 string title_list_forum
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

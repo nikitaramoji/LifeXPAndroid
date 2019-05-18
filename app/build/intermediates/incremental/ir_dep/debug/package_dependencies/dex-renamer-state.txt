@@ -1,4 +1,4 @@
-#Thu May 16 15:00:17 CEST 2019
+#Thu May 16 19:28:33 CEST 2019
 base.0=/Users/Nikita/AndroidStudioProjects/LifeXP/app/build/intermediates/transforms/dexMerger/debug/10
 path.1=classes2.dex
 renamed.1=classes2.dex

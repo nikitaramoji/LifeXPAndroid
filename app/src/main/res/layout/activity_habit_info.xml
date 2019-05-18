@@ -33,7 +33,6 @@
 
         <TextView
                 android:text="How many days a week do you exercise?"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -45,7 +44,6 @@
 
         <TextView
                 android:text="How many hours do you sleep on average?"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -57,7 +55,6 @@
 
         <TextView
                 android:text="How many hours a week do you work?"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -75,7 +72,6 @@
 
         <TextView
                 android:id="@+id/tvUpdatedLifeExpNum"
-                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
