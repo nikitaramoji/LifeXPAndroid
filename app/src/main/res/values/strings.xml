@@ -99,4 +99,37 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_new_habit">NewHabitActivity</string>
+    <string name="textView6text">first, we\'ll need some basic info.</string>
+    <string name="belowtextView6text">What is your date of birth?</string>
+    <string name="birthdayfieldhint">YYYY-MM-DD</string>
+    <string name="idtextview8text">What country were you born in?</string>
+    <string name="countryhint">United States</string>
+    <string name="radiotextmale">male</string>
+    <string name="radiotextfemale">female</string>
+    <string name="calculateLifeExpectancyText">Calculate Life Expectancy</string>
+    <string name="btnContinueText">Continue</string>
+    <string name="textviewgender">Gender</string>
+    <string name="textview9text">now, let\'s factor in your habits.</string>
+    <string name="tvfastfoodtext">How many servings of fast food do you eat per week?</string>
+    <string name="tvexercisetext">How many days a week do you exercise?</string>
+    <string name="tvsleeptext">How many hours do you sleep on average?</string>
+    <string name="tvworktext">How many hours a week do you work?</string>
+    <string name="btnUpdateLifeExpectancyText">Update Life Expectancy</string>
+    <string name="btnContinueText">Continue</string>
+    <string name="tvXMaxtext">–</string>
+    <string name="btnRegisterText">Register</string>
+    <string name="etEmailText">nikita.ramoji@gmail.com</string>
+    <string name="etEmailHint">email</string>
+    <string name="etPasswordText">123456</string>
+    <string name="etPasswordHint">Password</string>
+    <string name="tvLifeXPtext">LifeXP</string>
+    <string name="tvUsernameText">Username</string>
+    <string name="tvPasswordText">Password</string>
+    <string name="btnLoginText">Login</string>
+    <string name="newHabitText">What do you want to call your new habit?</string>
+    <string name="btnCreatetext">Create</string>
+    <string name="etNewHabitHint">New Habit Name</string>
+    <string name="splashtitletext">LifeXP</string>
+    <string name="btnDeleteText">Delete</string>
+    <string name="btnLogHabitText">Log</string>
 </resources>

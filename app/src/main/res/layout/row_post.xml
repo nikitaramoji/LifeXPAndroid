@@ -29,7 +29,7 @@
                 android:id="@+id/btnDeletePost"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
-                android:text="Delete"
+                android:text="@string/btnDeleteText"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:fontFamily="@font/actor"
                 android:background="#00BCD4"/>
@@ -38,7 +38,7 @@
                 android:id="@+id/btnLogHabit"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
-                android:text="Log"
+                android:text="@string/btnLogHabitText"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:fontFamily="@font/actor"
                 android:background="@color/colorPrimaryDark"

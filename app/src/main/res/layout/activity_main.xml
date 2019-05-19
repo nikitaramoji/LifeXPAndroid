@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:onClick="registerClick"
-            android:text="Register"
+            android:text="@string/btnRegisterText"
             android:fontFamily="@font/actor" android:textSize="18sp"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,11 +39,11 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:inputType="textEmailAddress"
-              android:text="nikita.ramoji@gmail.com"
+              android:text="@string/etEmailText"
               android:backgroundTint="@android:color/white"
               android:fontFamily="@font/actor"
 
-              android:hint="email"
+              android:hint="@string/etEmailHint"
               app:layout_constraintStart_toStartOf="parent"
               android:layout_marginTop="300dp" app:layout_constraintTop_toTopOf="parent"
               android:textColor="@android:color/white"/>
@@ -51,8 +51,8 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:inputType="textPassword"
-              android:text="123456"
-              android:hint="Password"
+              android:text="@string/etPasswordText"
+              android:hint="@string/etPasswordHint"
               android:backgroundTint="@android:color/white"
               android:fontFamily="@font/actor"
               android:textColorHint="@android:color/white"
@@ -60,7 +60,7 @@
               android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/etEmail"
               android:textColor="@android:color/white"/>
     <TextView
-            android:text=" LifeXP "
+            android:text="@string/tvLifeXPtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
@@ -72,7 +72,7 @@
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"/>
     <TextView
-            android:text="Username"
+            android:text="@string/tvUsernameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView3" android:fontFamily="@font/actor"
@@ -81,7 +81,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"/>
     <TextView
-            android:text="Password"
+            android:text="@string/tvPasswordText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4" android:fontFamily="@font/actor"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:onClick="loginClick"
-            android:text="Login" app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/btnLoginText" app:layout_constraintEnd_toEndOf="parent"
             android:fontFamily="@font/actor" android:textSize="18sp"
             android:background="@color/colorPrimaryDark" android:textColor="@android:color/white"
             app:layout_constraintStart_toStartOf="parent"
