@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
+    implementation 'nl.dionsegijn:konfetti:1.1.3'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.applandeo:material-calendar-view:1.0.1'
 

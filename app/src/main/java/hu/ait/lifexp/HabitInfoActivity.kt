@@ -1,6 +1,7 @@
 package hu.ait.lifexp
 
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +14,8 @@ import android.widget.Toast
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import hu.ait.lifexp.data.ExpectancyPost
+import nl.dionsegijn.konfetti.models.Shape
+import nl.dionsegijn.konfetti.models.Size
 
 
 class HabitInfoActivity : AppCompatActivity() {
@@ -82,6 +85,16 @@ class HabitInfoActivity : AppCompatActivity() {
         lifeExpNum += (updateByExercise() + updateByFastFood() + updateBySleep() + updateByWork())
         tvUpdatedLifeExpNum.text = lifeExpNum.toString()
         uploadLifeExpDem()
+        viewKonfetti.build()
+            .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+            .setDirection(0.0, 359.0)
+            .setSpeed(1f, 5f)
+            .setFadeOutEnabled(true)
+            .setTimeToLive(2000L)
+            .addShapes(Shape.RECT, Shape.CIRCLE)
+            .addSizes(Size(12))
+            .setPosition(-50f, viewKonfetti.width + 50f, -50f, -50f)
+            .streamFor(300, 5000L)
     }
 
     fun updateByExercise(): Int {

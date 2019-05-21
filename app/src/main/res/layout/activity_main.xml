@@ -39,7 +39,6 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:inputType="textEmailAddress"
-              android:text="@string/etEmailText"
               android:backgroundTint="@android:color/white"
               android:fontFamily="@font/actor"
 
@@ -51,7 +50,6 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:inputType="textPassword"
-              android:text="@string/etPasswordText"
               android:hint="@string/etPasswordHint"
               android:backgroundTint="@android:color/white"
               android:fontFamily="@font/actor"
@@ -64,7 +62,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
-
 
             android:fontFamily="@font/rock_salt" android:textSize="36sp" android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"

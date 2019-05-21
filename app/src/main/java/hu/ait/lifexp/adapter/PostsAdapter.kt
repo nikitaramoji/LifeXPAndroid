@@ -73,10 +73,6 @@ class PostsAdapter(
 
     private fun removePost(index: Int) {
         val db = FirebaseFirestore.getInstance()
-        val settings = FirebaseFirestoreSettings.Builder()
-            .setTimestampsInSnapshotsEnabled(true)
-            .build()
-        db.firestoreSettings = settings
         val habits = db.collection(
             "users"
         ).document(FirebaseAuth.getInstance().currentUser!!.uid).collection(

@@ -9,6 +9,11 @@
         android:orientation="vertical"
         tools:context=".DemographicInfoActivity" android:background="@drawable/background">
 
+    <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewKonfetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     <TextView
             android:text="@string/textview9text"
             android:textSize="24sp"
